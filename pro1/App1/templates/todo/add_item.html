@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Add Task</title>
+    </head>
+    <body>
+        <form method="POST" enctype="multipart/form-data">
+            {%csrf_token%}
+            {% for field in item_list %}
+            <tr>
+                <th>{{field.label}}</th>
+                <th>{{field}}</th>
+            </tr>
+            {% endfor %}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Todo</title>
+    </head>
+    <body>
+        {% for item in item_list %}
+        <ul>
+            <li> {{item.item_text}} </li>
+        </ul>
+        {% endfor %}
+
+        <a href="{% url 'add_item'%}">Add Task</a>
+    </body>
+</html>
